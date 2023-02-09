@@ -42,3 +42,10 @@ class PokemonView(View):
             dato = {"resultado":pokeid}
         return JsonResponse(dato)
     
+    def getPokemonNombre(self,nombre):
+        pokemon = list(Pokemon.objects.filter(identifier=nombre).values())
+        if len(pokemon)>0:
+            pokeNombre = pokemon[0]
+            data = {"resultado":pokeNombre}
+        return JsonResponse(data)
+    
