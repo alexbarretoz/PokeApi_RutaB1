@@ -35,3 +35,10 @@ class PokemonView(View):
 
         return JsonResponse(response)
     
+    def getPokemonId(self,id):
+        pokemon = list(Pokemon.objects.filter(id=id).values())
+        if len(pokemon)>0:
+            pokeid = pokemon[0]
+            dato = {"resultado":pokeid}
+        return JsonResponse(dato)
+    
