@@ -1,7 +1,7 @@
 from django.http.response import JsonResponse
 from django.views import View
 from django.core.paginator import Paginator,  EmptyPage, PageNotAnInteger
-from .models import Pokemon
+from .models import Pokemon,Pokedex
 
 
 
@@ -48,4 +48,11 @@ class PokemonView(View):
             pokeNombre = pokemon[0]
             data = {"resultado":pokeNombre}
         return JsonResponse(data)
-    
+
+
+class PokedexView(View):
+    def getPokedex(self):
+        pokedexes = list(Pokedex.objects.values())
+        if len(pokedexes)>0:
+            datos = {"resultado":pokedexes}
+        return JsonResponse(datos)
