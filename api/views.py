@@ -56,3 +56,17 @@ class PokedexView(View):
         if len(pokedexes)>0:
             datos = {"resultado":pokedexes}
         return JsonResponse(datos)
+    
+    def getPokedexId(self,id):
+        pokedex = list(Pokedex.objects.filter(id=id).values())
+        if len(pokedex)>0:
+            pokedexid = pokedex[0]
+            dato = {"resultado":pokedexid}
+        return JsonResponse(dato)
+    
+    def getPokedexNombre(self,nombre):
+        pokedex = list(Pokedex.objects.filter(identifier=nombre).values())
+        if len(pokedex)>0:
+            pokedexNombre = pokedex[0]
+            data = {"resultado":pokedexNombre}
+        return JsonResponse(data)
