@@ -27,9 +27,9 @@ DEBUG = True
 
 
 
-ALLOWED_HOSTS = ['pokemaster-prob1-production.up.railway.app']
+ALLOWED_HOSTS = ['pokeapirutab1-production.up.railway.app']
 
-CSRF_TRUSTED_ORIGINS = ['https://pokemaster-prob1-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://pokeapirutab1-production.up.railway.app']
 
 
 
