@@ -28,6 +28,8 @@ Guía de la API para conocer las rutas y datos de retorno: https://pokeapi.co/do
 ## Despliegue de la Pokeapi 
 
 - Ruta pokemon:
+https://pokeapirutab1-production.up.railway.app/api/pokemon/
 
 
 - Ruta pokedex:
+https://pokeapirutab1-production.up.railway.app/api/pokedex/
