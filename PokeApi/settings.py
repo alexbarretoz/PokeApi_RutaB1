@@ -81,13 +81,14 @@ WSGI_APPLICATION = 'PokeApi.wsgi.application'
 
 
 # mysql://root:94qgmZ8I27UzWqRXwUW7@containers-us-west-55.railway.app:7032/railway
+#mysql://root:RL98ld0oKVBdTUbiw9aA@containers-us-west-55.railway.app:7032/railway
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'HOST': 'containers-us-west-55.railway.app',
         'PORT': '7032',
         'USER': 'root',
-        'PASSWORD':'94qgmZ8I27UzWqRXwUW7',
+        'PASSWORD':'RL98ld0oKVBdTUbiw9aA',
         'NAME': 'railway'
     }
 }
