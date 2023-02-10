@@ -27,6 +27,7 @@ DEBUG = True
 
 
 
+
 ALLOWED_HOSTS = ['pokeapirutab1-production.up.railway.app']
 
 CSRF_TRUSTED_ORIGINS = ['https://pokeapirutab1-production.up.railway.app']
@@ -82,6 +83,25 @@ WSGI_APPLICATION = 'PokeApi.wsgi.application'
 
 # mysql://root:94qgmZ8I27UzWqRXwUW7@containers-us-west-55.railway.app:7032/railway
 #mysql://root:RL98ld0oKVBdTUbiw9aA@containers-us-west-55.railway.app:7032/railway
+"""""
+
+
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': 'localhost',
+        'PORT': '3306',
+        'USER': 'root',
+        'PASSWORD':'admin12345',
+        'NAME': 'bd_pokeapi1'
+    }
+}
+
+
+"""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -92,9 +112,6 @@ DATABASES = {
         'NAME': 'railway'
     }
 }
-
-
-
 
 
 # Password validation
