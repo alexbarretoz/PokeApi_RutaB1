@@ -25,7 +25,12 @@ SECRET_KEY = 'django-insecure-i6ea_tqn_jtafbbh&6%y_jr!k0x-8c6r=$#%j45xe!xtu*+5d6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+
+ALLOWED_HOSTS = ['pokemaster-prob1-production.up.railway.app']
+
+CSRF_TRUSTED_ORIGINS = ['https://pokemaster-prob1-production.up.railway.app']
+
 
 
 # Application definition
@@ -37,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'api'
 ]
 
 MIDDLEWARE = [
@@ -73,12 +79,21 @@ WSGI_APPLICATION = 'PokeApi.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+
+# mysql://root:94qgmZ8I27UzWqRXwUW7@containers-us-west-55.railway.app:7032/railway
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': 'containers-us-west-55.railway.app',
+        'PORT': '7032',
+        'USER': 'root',
+        'PASSWORD':'94qgmZ8I27UzWqRXwUW7',
+        'NAME': 'railway'
     }
 }
+
+
+
 
 
 # Password validation
